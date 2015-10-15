@@ -22,11 +22,7 @@
     <body>
 
         <table align="center" class="style1">
-            <tr>
-                <td colspan="2" style="text-align: center">
-					<img src="http://picam:8080/?action=stream"/>
-                </td>
-            </tr>
+            
             <tr>
                 <td colspan="2" style="text-align: center">
                     <input id="btnUp" type="button" value="Up" onclick="Button_onclick('up')" />
@@ -43,6 +39,14 @@
             <tr>
                 <td colspan="2" style="text-align: center">
                     <input id="btnDown" type="button" value="Down" onclick="Button_onclick('down')" />
+                </td>
+            </tr>
+			<tr>
+                <td style="text-align: center">
+                    <input id="btnSpin" type="button" value="Spin" onclick="Button_onclick('spin')" />
+                </td>
+                <td style="text-align: center">
+                    <input id="btnCSpin" type="button" value="CounterSpin" onclick="Button_onclick('counterspin')" />
                 </td>
             </tr>
         </table>
