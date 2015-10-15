@@ -72,6 +72,7 @@ def move(direction):
             servoYaw.set_servo(21, angleMap(na))
             pins[21]['angle'] = na
         return str(na) + ' ' + str(angleMap(na))
+    return str(direction)
 
 @app.route("/<motor>/<pulsewidth>", methods=['GET', 'POST'])
 def manual(motor,pulsewidth):
