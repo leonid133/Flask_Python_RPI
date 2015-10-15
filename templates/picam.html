@@ -13,7 +13,8 @@
 
             function Button_onclick(direction) {
                 $.ajax({ url: '/' + direction, 
-			type: 'POST'});
+						 type: POST,
+						 cache: false});
             }
 
         </script>
