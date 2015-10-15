@@ -39,7 +39,7 @@ def move(direction):
     if direction == 'left':
         na = pins[23]['angle'] + 10
         if int(na) <= 180:
-            servorRoll.set_servo(23, angleMap(na))
+            servoRoll.set_servo(23, angleMap(na))
             pins[23]['angle'] = na
         return str(na) + ' ' + str(angleMap(na))
     elif direction == 'right':
