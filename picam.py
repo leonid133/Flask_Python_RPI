@@ -9,7 +9,7 @@ def angleMap(angle):
 
 pins = {
     23 : {'name' : 'roll', 'angle' : 90},
-    22 : {'name' : 'pitch', 'angle' : 90}
+    22 : {'name' : 'pitch', 'angle' : 90},
     21 : {'name' : 'yaw', 'angle' : 90}
     }
 
