@@ -12,7 +12,8 @@
         <script language="javascript" type="text/javascript">
 
             function Button_onclick(direction) {
-                $.ajax({ url: '/' + direction });
+                $.ajax({ url: '/' + direction, 
+			type: 'POST'});
             }
 
         </script>

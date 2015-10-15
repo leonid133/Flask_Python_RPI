@@ -39,12 +39,12 @@ def main():
     return render_template('picam.html', **templateData)
 
 # The function below is executed when someone requests a URL with a move direction
-@app.route("/<direction>")
+@app.route("/<direction>", methods=['GET', 'POST'])
 def move(direction):
     # Choose the direction of the request
     if direction == 'left':
 	    # Increment the angle by 10 degrees
-        na = pins[23]['angle'] + 10
+        na = pins[23]['angle'] + 1
         # Verify that the new angle is not too great
         if int(na) <= 180:
             # Change the angle of the servo
@@ -53,19 +53,19 @@ def move(direction):
             pins[23]['angle'] = na
         return str(na) + ' ' + str(angleMap(na))
     elif direction == 'right':
-        na = pins[23]['angle'] - 10
+        na = pins[23]['angle'] - 1
         if na >= 0:
             servoPan.set_servo(23, angleMap(na))
             pins[23]['angle'] = na
         return str(na) + ' ' + str(angleMap(na))
     elif direction == 'up':
-        na = pins[22]['angle'] + 10
+        na = pins[22]['angle'] + 1
         if na <= 180:
             servoTilt.set_servo(22, angleMap(na))
             pins[22]['angle'] = na
         return str(na) + ' ' + str(angleMap(na))
     elif direction == 'down':
-        na = pins[22]['angle'] - 10
+        na = pins[22]['angle'] - 1
         if na >= 0:
             servoTilt.set_servo(22, angleMap(na))
             pins[22]['angle'] = na
