@@ -63,7 +63,7 @@ def move(direction):
     elif direction == 'spin':
         na = pins[21]['angle'] + 10
         if na <= 180:
-            servoYaw.set_servo(22, angleMap(na))
+            servoYaw.set_servo(21, angleMap(na))
             pins[21]['angle'] = na
         return str(na) + ' ' + str(angleMap(na))
     elif direction == 'counterspin':
